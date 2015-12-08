@@ -10,9 +10,9 @@ var arrayHora = String(hora).split(":");
 var fechaEnvio = new Date(arrayFecha[0],arrayFecha[1]-1,arrayFecha[2],arrayHora[0],arrayHora[1],00,00);
 var mesUTC = fechaEnvio.getUTCMonth()+1;
 var fechaEnvio = String(fechaEnvio.getUTCFullYear()+"-"+mesUTC+"-"+fechaEnvio.getUTCDate()+"T"+fechaEnvio.getUTCHours()+":"+fechaEnvio.getUTCMinutes());
-var appKey = "pYxZvtVCUQZ7TEp4H4hKQYWfi54FY5yK";
-var userPush = "otniel.gomez@sorteostec.mx";
-var passwordPush = "qwe123/*-";
+var appKey = "<APP KEY>";
+var userPush = "<USER>";
+var passwordPush = "<PASSWORD>";
 //RECIBIMOS JSON DE SESION
 var objSrvHTTP, objPOSTDocument, session1;
 objSrvHTTP = Server.CreateObject ("Msxml2.ServerXMLHTTP.6.0");
