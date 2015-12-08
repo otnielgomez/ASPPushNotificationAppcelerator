@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Enviar Push Notification</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="/pushNotification/css/bootstrap.min.css" />
+    <script type="text/javascript" src="/pushNotification/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        function programarEnvio () {
+            $("#scheduleField").toggle();
+        }
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <form role="form" action="http://10.64.16.157:82/pushNotification/push.asp" method="POST" accept-charset="utf-8">
+            <div class="col-lg-12">
+                <h1>PUSH NOTIFICATIONS DE SORTEOS TEC</h1>
+                <br>
+                <div>
+                	<input type="radio" name="schedule" value="false" checked="checked" onfocus="programarEnvio()"> Enviar Ahora<br>
+					<input type="radio" name="schedule" value="true" onfocus="programarEnvio()"> Programar Envio
+                </div>
+                <br>
+                <div class="col-lg-12" id="scheduleField" style="display:none;">
+                	<div class="col-lg-6" style="text-align: center;">
+                		Fecha de envio: <input type="date" name="date">	
+                	</div>
+                	<div class="col-lg-6" style="text-align: center;">
+                		Hora de envio: <b style="color:red;">(Horario Militar)</b> <input type="time" name="time">
+                	</div>
+                </div>
+                <div class="col-lg-12" style="margin-top: 15px;">
+	                <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Titulo" required>
+	                <br>
+	                <div class="form-group">
+	                    <label>Mensaje</label>
+	                    <textarea name="mensaje" id="mensaje" class="form-control" rows="5" required></textarea>
+	                </div>
+	            </div>
+                <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info pull-right">
+            </div>
+        </form>
+    </div>
+</div>r
+</body>
+</html>
